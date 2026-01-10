@@ -139,7 +139,7 @@
     <message>
         <location filename="../qml/content/ChangeLogPage.qml" line="37"/>
         <source>New version %1 now installed on your phone. Have a look in the change log for details.</source>
-        <translation>Uusi versio %1 on nyt asennettu puhelimeesi.  Katso lisätiedot muutoslokista.</translation>
+        <translation>Uusi versio %1 on nyt asennettu puhelimeesi. Katso lisätiedot muutoshistoriasta.</translation>
     </message>
     <message>
         <location filename="../qml/content/ChangeLogPage.qml" line="57"/>
@@ -480,7 +480,7 @@
     <message>
         <location filename="../qml/content/EditGroupDetailsDialog.qml" line="142"/>
         <source>Change group details</source>
-        <translation>Vaihda ryhmän yksityiskohtia</translation>
+        <translation>Muokkaa ryhmän yksityiskohtia</translation>
     </message>
     <message>
         <location filename="../qml/content/EditGroupDetailsDialog.qml" line="148"/>
@@ -561,7 +561,7 @@
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="99"/>
         <source>Change default settings of your ownKeepass application here</source>
-        <translation>Muuta ownKeepass-oletusasetuksia tässä</translation>
+        <translation>Muuta ownKeepassin oletusasetuksia tässä</translation>
     </message>
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="103"/>
@@ -713,12 +713,12 @@
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="332"/>
         <source>UI settings</source>
-        <translation>Käyttäjäliitännän asetukset</translation>
+        <translation>Käyttöliittymän asetukset</translation>
     </message>
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="339"/>
         <source>Change here orientation of the display</source>
-        <translation>Vaihda täällä näytön orientaatiota</translation>
+        <translation>Vaihda näytön suuntaa</translation>
     </message>
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="343"/>
@@ -729,17 +729,17 @@
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="344"/>
         <source>Portrait</source>
-        <translation>Pystyasento</translation>
+        <translation>Pysty</translation>
     </message>
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="345"/>
         <source>Landscape</source>
-        <translation>Vaaka-asento</translation>
+        <translation>Vaaka</translation>
     </message>
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="505"/>
         <source>Sort in alphabetical order</source>
-        <translation>Laita aakkosjärjestykseen</translation>
+        <translation>Järjestä aakkosjärjestykseen</translation>
     </message>
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="506"/>
@@ -754,7 +754,7 @@
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="530"/>
         <source>If enabled the search bar will be focused on application startup</source>
-        <translation>Jos asetettu, hakukenttä kohdistetaan sovelluksen käynnistyessä</translation>
+        <translation>Jos kytketty, osoitin kohdistetaan hakukenttään sovelluksen käynnistyessä</translation>
     </message>
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="539"/>
@@ -789,7 +789,7 @@
     <message>
         <location filename="../qml/content/EditSettingsDialog.qml" line="570"/>
         <source>Enable this to copy username and password into clipboard from cover</source>
-        <translation>Asettamalla tämän, sallit käyttäjänimen ja salasanan kopioinnin kansilehdeltä leikepöydälle</translation>
+        <translation>Tämän kytkeminen sallii käyttäjänimen ja salasanan kopioinnin kansilehdeltä leikepöydälle</translation>
     </message>
 </context>
 <context>
@@ -1018,7 +1018,7 @@
         <location filename="../qml/help/HelpOpenNewDatabase.qml" line="28"/>
         <source>Here you can open an existing Keepass database file.&lt;br&gt;&lt;br&gt;Use the file browser to search for your Keepass database file. You will be able to look into the following locations: Device Memory, SD card and Android storage. If you have trouble with ownKeepass not finding the file please make sure to place it in below mentioned paths. &quot;Device Memory&quot; is located at &quot;%1&quot;. If a SD card is inserted in your phone it is located at &quot;/media/sdcard/&amp;lt;UUID&amp;gt;&quot;. (Please note that SD cards with more than one partition are not supported.) &quot;Android storage&quot; is located at &quot;%2&quot;.&lt;br&gt;&lt;br&gt;Advice: If you upload your Keepass database into the cloud please make sure you use a locally stored key file in addition to the master password. This key file should not be uploaded to the cloud service.&lt;br&gt;&lt;br&gt;&lt;b&gt;Use key file&lt;/b&gt;&lt;br&gt;&lt;br&gt;If you need a key file for opening your Keepass database please check this option.&lt;br&gt;&lt;br&gt;&lt;b&gt;Master password&lt;/b&gt;&lt;br&gt;&lt;br&gt;Type in here the password for your Keepass database.&lt;br&gt;&lt;br&gt;</source>
         <extracomment>Removed one sentence in section &quot;Use key file&quot;, Changed &quot;Home&quot; to &quot;Device Memory&quot;, Removed section for &quot;Open automatically&quot;, changed &lt;UUID&gt; to &amp;lt;UUID&amp;gt; so that it will be actually shown ;)</extracomment>
-        <translation>Tässä avataan olemassa oleva Keepass-tietokanta tiedosto.&lt;br&gt;&lt;br&gt;Valitse tiedost käyttäen tiedostoselainta. Voit etsiä tietokantaa seuraavista sijainneista: laitteen tallennustila, SD-kortti tai Android-tallennustila. Mikäli sinulla on vaikeuksia löytää siirtämäsi tietokanta, varmista että olet laittanut sen johonkin seuraavista tiedostopoluista: &quot;Kotihakemisto&quot; on yleensä &quot;%1&quot;. Jos SD-kortti on asennettu puhelimeesi, se sijaitsee: &quot;/media/sdcard/&amp;lt;UUID&amp;gt;&quot;. (Ole hyvä ja huomio, että SD-kortteja, jotka on jaettu useampaan kuin yhteen osioon, ei tueta tässä versiossa). &quot;Android-muisti&quot; sijaitsee: &quot;%2&quot;.&lt;br&gt;&lt;br&gt;Ohje: mikäli lataat Keepass-tietokannan pilvipalveluun, varmista se käyttämällä paikallisesti talletettua avaintiedostoa pääsalasanan lisäksi. Avaintiedostoa ei tule koskaan ladata pilvipalveluun.&lt;br&gt;&lt;br&gt;&lt;b&gt;Avaintiedosto&lt;/b&gt;&lt;br&gt;&lt;br&gt;Mikäli tarvitset avain-tiedostoa Keepass-tietokantasi avaamiseksi, merkitse tämä valinta.&lt;br&gt;&lt;br&gt;&lt;b&gt;Pääsalasana&lt;/b&gt;&lt;br&gt;&lt;br&gt;Anna tässä Keepass-tietokantasi salasana.&lt;br&gt;&lt;br&gt;</translation>
+        <translation>Tässä avataan olemassa oleva Keepass-tietokantatiedosto.&lt;br&gt;&lt;br&gt;Valitse tiedosto käyttäen tiedostoselainta. Voit etsiä tietokantaa seuraavista sijainneista: laitteen tallennustila, SD-kortti tai Android-tallennustila. Mikäli sinulla on vaikeuksia löytää siirtämäsi tietokanta, varmista että olet laittanut sen johonkin seuraavista tiedostopoluista: Kotihakemiston sijainti on yleensä &quot;%1&quot;. Jos puhelimeesi on asennettu SD-kortti, sen sijainti on: &quot;/media/sdcard/&amp;lt;UUID&amp;gt;&quot;. (Huomioithan, että useampaan kuin yhteen osioon jaettuja SD-kortteja ei tueta tässä versiossa). Android-tallennustilan sijainti on&quot;%2&quot;.&lt;br&gt;&lt;br&gt;Ohje: mikäli lataat Keepass-tietokannan pilvipalveluun, suojaa se käyttämällä paikallisesti tallennettua avaintiedostoa pääsalasanan lisäksi. Avaintiedostoa ei tule koskaan ladata pilvipalveluun.&lt;br&gt;&lt;br&gt;&lt;b&gt;Avaintiedosto&lt;/b&gt;&lt;br&gt;&lt;br&gt;Mikäli tarvitset avaintiedostoa Keepass-tietokantasi avaamiseksi, merkitse tämä valinta.&lt;br&gt;&lt;br&gt;&lt;b&gt;Pääsalasana&lt;/b&gt;&lt;br&gt;&lt;br&gt;Anna tässä Keepass-tietokantasi salasana.&lt;br&gt;&lt;br&gt;</translation>
     </message>
 </context>
 <context>
@@ -1026,8 +1026,7 @@
     <message>
         <location filename="../qml/help/HelpOpenRecentDatabase.qml" line="27"/>
         <source>Type in here the password for opening the Keepass database. If you chose a key file it will be automatically loaded from the path you specified earlier.&lt;br&gt;&lt;br&gt;</source>
-        <translatorcomment>Syötä Keepass-tietokannan pääsalasana tähän. Jos olet valinnut avaintiedoston, se ladataan automaattisesti aiemmin valitsemastasi polusta.&lt;br&gt;&lt;br&gt;</translatorcomment>
-        <translation></translation>
+        <translation>Syötä Keepass-tietokannan pääsalasana tähän. Jos olet valinnut avaintiedoston, se ladataan automaattisesti aiemmin valitsemastasi polusta.&lt;br&gt;&lt;br&gt;</translation>
     </message>
 </context>
 <context>
@@ -1102,7 +1101,7 @@
     <message>
         <location filename="../qml/content/LockPage.qml" line="136"/>
         <source>Unlock your Password Safe with the first 3 characters of your master password:</source>
-        <translation>Avaa salasanatiedostosi antamalla pääsalasanasi 3 ensimmäistä merkkiä:</translation>
+        <translation>Avaa salasanatiedostosi antamalla pääsalasanasi kolme ensimmäistä merkkiä:</translation>
     </message>
     <message>
         <location filename="../qml/content/LockPage.qml" line="235"/>
@@ -1264,7 +1263,7 @@
     <message>
         <location filename="../qml/content/MainPage.qml" line="125"/>
         <source>No database opened</source>
-        <translation>TIetokantaa ei ole avattu</translation>
+        <translation>Tietokantaa ei ole avattu</translation>
     </message>
     <message>
         <location filename="../qml/content/MainPage.qml" line="126"/>
