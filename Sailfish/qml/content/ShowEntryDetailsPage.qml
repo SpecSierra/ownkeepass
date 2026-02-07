@@ -142,6 +142,70 @@ Page {
                 passwordMode: true
             }
 
+            // TOTP section
+            Item {
+                width: parent.width
+                height: totpEntryArea.height
+                visible: kdbEntry.hasTotp
+                enabled: kdbEntry.hasTotp
+
+                EntryTextArea {
+                    id: totpEntryArea
+                    width: parent.width
+                    text: kdbEntry.totpCode
+                    label: qsTr("TOTP")
+                    menuLabel: qsTr("Copy to clipboard")
+                    onMenuClicked: copyToClipboard(text, label)
+                }
+
+                // Circular countdown indicator
+                Item {
+                    id: totpCountdown
+                    anchors.top: totpEntryArea.top
+                    anchors.topMargin: Theme.paddingSmall
+                    anchors.right: parent.right
+                    anchors.rightMargin: Theme.horizontalPageMargin
+                    width: Theme.iconSizeMedium
+                    height: width
+
+                    Canvas {
+                        id: countdownCanvas
+                        anchors.fill: parent
+                        property real progress: kdbEntry.totpPeriod > 0 ?
+                            kdbEntry.totpTimeRemaining / kdbEntry.totpPeriod : 0
+
+                        onProgressChanged: requestPaint()
+
+                        onPaint: {
+                            var ctx = getContext("2d")
+                            ctx.reset()
+                            var cx = width / 2, cy = height / 2, r = width / 2 - 2
+                            // Background circle
+                            ctx.beginPath()
+                            ctx.arc(cx, cy, r, 0, 2 * Math.PI)
+                            ctx.strokeStyle = Theme.rgba(Theme.primaryColor, 0.2)
+                            ctx.lineWidth = 3
+                            ctx.stroke()
+                            // Progress arc
+                            ctx.beginPath()
+                            var startAngle = -Math.PI / 2
+                            var endAngle = startAngle + (2 * Math.PI * progress)
+                            ctx.arc(cx, cy, r, startAngle, endAngle)
+                            ctx.strokeStyle = progress < 0.2 ?
+                                Theme.errorColor : Theme.highlightColor
+                            ctx.lineWidth = 3
+                            ctx.stroke()
+                            // Remaining seconds text
+                            ctx.fillStyle = Theme.primaryColor
+                            ctx.font = Theme.fontSizeSmall + "px sans-serif"
+                            ctx.textAlign = "center"
+                            ctx.textBaseline = "middle"
+                            ctx.fillText(kdbEntry.totpTimeRemaining, cx, cy)
+                        }
+                    }
+                }
+            }
+
             EntryTextArea {
                 id: entryCommentTextArea
                 text: kdbEntry.notes
